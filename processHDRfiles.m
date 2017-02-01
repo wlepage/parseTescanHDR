@@ -1,6 +1,5 @@
 %% config
-% data_dir = 'W:\Experiments\20160622\';  % folder that has the Tescan header files
-data_dir = 'C:\Users\wlepage\Google Drive\Dasgupta-Battery Subgroup\Data_Characterization\SEM\20170201 DIC patterned Li\'; 
+data_dir = 'W:\Experiments\20160622\';  % folder that has the Tescan header files; make sure there's a trailing backslash
 save_filename = 'headers_20170201'; % name of the Excel file output
 
 %% prep and preallocate
