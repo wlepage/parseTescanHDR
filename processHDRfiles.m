@@ -1,6 +1,9 @@
+%% Tescan header (.hdr) processing
+% wlepage@umich.edu
+
 %% config
-data_dir = 'W:\Experiments\20160622\';  % folder that has the Tescan header files; make sure there's a trailing backslash
-save_filename = 'headers_20170201'; % name of the Excel file output
+data_dir = 'W:\Experiments\20170424\';  % folder that has the Tescan header files
+save_filename = 'headers_20170424'; % name of the Excel file output
 
 %% prep and preallocate
 main_dir = pwd;
@@ -14,7 +17,7 @@ outputs{1,1} = 'filename';
 for ii = 1:filecount
     % load the text
     fid = fopen(filestruct(ii,1).name);
-    C = textscan(fid, '%s%s', 63, 'HeaderLines',1,'Delimiter','=','CollectOutput',false);
+    C = textscan(fid,'%s%s', 63, 'HeaderLines',1,'Delimiter','=','CollectOutput',false);
     fclose(fid);
     if ii==1 % for the first file only, make the header row of the spreadsheet
         if strcmp(C{1,1}{2},'Date') % if there was not line or frame accumlation
